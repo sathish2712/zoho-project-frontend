@@ -24,7 +24,7 @@
                             <input type="text" class="form-control" id="name">
                         </div>
                         <div class="col">
-                            <label for="Sex">Gender</label>
+                            <label for="Gender">Gender</label>
                             <input type="text" class="form-control" id="gender">
                         </div>
                         <div class="col">
@@ -35,11 +35,11 @@
                     <div class="form-row">
                         <div class="col">
                             <label for="customerName">State</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" id="state">
                         </div>
                         <div class="col">
                             <label for="">City</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" id="city">
                         </div>
                         <div class="col">
                             <label for="phone">Area</label>
@@ -53,46 +53,21 @@
                     <div class="form-row">
                         <div class="col">
                             <label for="pname">Enter the product names (separated by commas )</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" id="products">
                         </div>
                     </div>
-                    <div>
+                    <div><br>
                         <small><b>Payment Option</b></small>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="gpay">
-                            <label class="form-check-label">
-                                   Google Pay
-                                </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="debit" checked>
-                            <label class="form-check-label">
-                                    Debit Card   
-                                </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="credit" checked>
-                            <label class="form-check-label">
-                                    Credit Card
-                                </label>
-                        </div>
+                        <label for="customerName">Gpay/Creditcard/DebitCard</label><br>
+                        <input type="text" class="form-control" id="payment">
                         <div class="form-group">
                             <small><b>Card number/UPI pin</b></small><br>
                             <input type="text" class="form-control" id="pin">
                         </div>
                     </div>
-                    <div class="form-check">
-                        <small><b>Customer Type</b></small><br>
-                        <input class="form-check-input" type="radio" name="flexRadio" id="premium" checked>
-                        <label class="form-check-label">
-                                I'm premium customer
-                            </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadio" id="nonpremium" checked>
-                        <label class="form-check-label">
-                              No, I'm not premium customer
-                            </label>
+                    <div class="form-group">
+                        <small><b>Customer type(premium/non-premimum)</b></small><br>
+                        <input type="text" class="form-control" id="ctype">
                     </div>
                     <small>*Your bill amount will charged with 5% SGST and 10% CGST</small>
                     <br><br>
