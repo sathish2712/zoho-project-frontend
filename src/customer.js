@@ -6,6 +6,7 @@ const City = document.querySelector("#city")
 const Product = document.querySelector("#products")
 const paymentType = document.querySelector("#payment")
 const paymentDetails = document.querySelector("#pin")
+const customerType = document.querySelector("#ctype")
 
 const mgs = document.querySelector("#mgs")
 const formSubmit = document.querySelector("#formData")
@@ -21,8 +22,9 @@ formSubmit.addEventListener('click', function(e) {
     const prod = Product.value
     const ptype = paymentType.value
     const pdetails = paymentDetails.value
+    const custType = customerType.value
     console.log("test")
-    fetch('http://localhost:8080/backend-Zoho/webapi/store/customer?name=' + custName + "&gender=" + gender + "&phone=" + phone + "&state=" + state + "&city=" + city + "&products=" + product + "&product=" + prod + "&ptype=" + ptype + "&pdetail=" + pdetails, {
+    fetch('http://localhost:8080/backend-Zoho/webapi/store/customer?name=' + custName + "&gender=" + gender + "&phone=" + phone + "&state=" + state + "&city=" + city + "&products=" + prod + "&product=" + prod + "&ptype=" + ptype + "&pdetail=" + pdetails + "&ctype=" + custType, {
         method: 'post',
         headers: {
             "Content-type": "application/json"
@@ -30,6 +32,8 @@ formSubmit.addEventListener('click', function(e) {
     }).then(function(response) {
         if (response.status == 200) {
             mgs.textContent = 'Your invoice has been created (locally) '
+        } else if (response.status != 200) {
+            mgs.textContent = 'Something went wrong while adding data to DB!'
         }
     })
 })
