@@ -17,3 +17,23 @@
     right: 0;
     margin: auto;
 }
+
+#signup {
+    width: 500px;
+    height: 150px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#login {
+    width: 400px;
+    height: 150px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}

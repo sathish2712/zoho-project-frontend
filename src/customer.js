@@ -30,10 +30,10 @@ formSubmit.addEventListener('click', function(e) {
             "Content-type": "application/json"
         },
     }).then(function(response) {
-        if (response.status == 200) {
+        if (response.status == 201) {
             mgs.textContent = 'Your invoice has been created (locally) '
-        } else if (response.status != 200) {
-            mgs.textContent = 'Something went wrong while adding data to DB!'
+        } else if (response.status == 401) {
+            mgs.textContent = 'Some Products is out of Stock! Please check inventory!'
         }
     })
 })
